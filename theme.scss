@@ -1,6 +1,7 @@
 /* --------------------------------------------------------------------------------------------- */
 /* Variables */
 /* Här deklareras alla variabler */
+/* Tema: Calpeda */
 /* --------------------------------------------------------------------------------------------- */
 
 /* Colors */
@@ -890,6 +891,26 @@ strong a {
 }
 
 /* --------------------------------------------------------------------------------------------- */
+/* Konstruktioner */
+/* --------------------------------------------------------------------------------------------- */
+
+.constructs.col-sm-4{
+padding: 40px 40px;
+	.img-responsive{
+object-fit: none; 
+object-position: center; 
+height: 250px;
+width: 380px;
+	}
+}
+
+.map.col-sm-12{
+	iframe{
+	    width: 100%;
+}
+}
+
+/* --------------------------------------------------------------------------------------------- */
 /* Subpage */
 /* --------------------------------------------------------------------------------------------- */
 
@@ -902,7 +923,6 @@ strong a {
 	padding: 50px 0 0 0;
 	background-color: $footer-color;
 	border-top: 10px solid $primary-color;
-	text-align: center;
 	@media(min-width:768px){
 		padding: 40px 0;		
 	}
@@ -933,8 +953,6 @@ strong a {
 	}
 	img{
 		width: 200px;
-		text-align: center;
-		margin: auto;
 		padding-bottom:10px;
 		@media(min-width:768px){
 			width:150px;
@@ -2037,9 +2055,7 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 }
 
 /* --------------------------------------------------------------------------------------------- */
-#search-bar{
-	display: none;
-}
+
 #search {
 	h1 {
 		margin-bottom: 20px;
@@ -2070,34 +2086,50 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 	width: 100%;
 	padding: 13px 25px;
 	outline: none;
-	text-align: center;
-	border:none;
-	border-bottom: 1px solid #ddd;
-	font-size: 2.5em;
+	border: none;
+	font-size: 1em;
+	font-weight: 100;
+	border-bottom: 0;
+	border-top: 0;
 	&::-webkit-input-placeholder {
-		color: #666;
+		color: #888888;
+		font-size: 14px;
+		font-weight: 500;
 	}
 	&:-moz-placeholder {
-		color: #666;
+		color: #888888;
 		opacity: 1;
+		font-size: 14px;
+		font-weight: 500;
 	}
 	&::-moz-placeholder {
-		color: #666;
+		color: #888888;
 		opacity: 1;
+		font-size: 14px;
+		font-weight: 500;
 	}
 	&:-ms-input-placeholder {
-		color: #666;
+		color: #888888;
+		font-size: 14px;
+		font-weight: 500;
 	}
 }
 
 .search-submit {
 	position: absolute;
+	background-color: transparent;
 	top: 9px;
-	right: 20px;
-	float: right;
+	left: 0;
+	float: left;
 	display: block;
-	border: 0;
-	background-color: #fff;
+	border: none;
 	width: 19px;
 	height: 20px;
+	&:after {
+		font-family: 'FontAwesome';
+		content: '\f002';
+		color: #888888;
+	}
 }
+
+/*-- Ny kod*/
