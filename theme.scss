@@ -335,9 +335,9 @@ strong a {
 }
 .news.col-sm-5{
 	border: 1px solid $primary-color;
-	margin-bottom: 40px;
+	margin: 15px 15px 30px 15px;
 		@media(min-width:768px){	
-			margin-bottom: 0px;
+			margin: auto;
 	}
 }
 
@@ -890,30 +890,87 @@ strong a {
 	height: 100%;
 }
 
-/* --------------------------------------------------------------------------------------------- */
-/* Konstruktioner */
-/* --------------------------------------------------------------------------------------------- */
+.calpedaen{
+    float: right;
+    margin: 0px 15px 10px;
+		img{
+		width: 60%;
+		margin-top: 10px;
+		}
+		@media(min-width:768px){
+		margin-left: 40px;
+		}
+}
+.col-md-4.send-right{
+	float:right;
+}
 
-.constructs.col-sm-4{
-padding: 40px 40px;
-	.img-responsive{
-object-fit: none; 
-object-position: center; 
-height: 250px;
-width: 380px;
+
+/* --------------------------------------------------------------------------------------------- */
+/* Portfolio constructs */
+/* --------------------------------------------------------------------------------------------- */
+.portfolio-main {
+    text-align: center;
+	img{
+	margin: 5px 5px;
+	}
+	.content {
+    margin-top: 20px;
+}
+}
+
+.btn.btn-back{
+	background-color: $primary-color;
+	background-image: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    margin: 2px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-shadow: none;
+    @include border-radius(3px);
+    @include transition(all 0.5s ease);
+    &:hover {
+	    background: darken( $primary-color, 10% );
+	    color: #fff;
+    }
+}
+
+.project-item{
+	img {
+    padding: 10px 10px;
+    object-fit: none; 
+	object-position: center; 
+	height: 250px;
+	width: 380px;
+	}
+	&:hover img { 
+	opacity : .5; 
+	}
+	.info {
+    padding: 10px 10px;
 	}
 }
 
-.map.col-sm-12{
-	iframe{
-	    width: 100%;
-}
-}
-
-/* --------------------------------------------------------------------------------------------- */
-/* Subpage */
-/* --------------------------------------------------------------------------------------------- */
-
+/*
+.image-overlay {
+ 	width: 200px;
+    height: 300px;
+    background-color: #f0f0;
+    z-index: 1;
+    opacity: 0.5;
+    position: fixed;
+    top: 0.5em;
+    display:block;
+}*/
 
 /* --------------------------------------------------------------------------------------------- */
 /* Footer */
@@ -1383,6 +1440,9 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 	color: $primary-color;
 }
 
+.pagination {
+     display: none;
+}
 /* --------------------------------------------------------------------------------------------- */
 /* Category */
 /* --------------------------------------------------------------------------------------------- */
@@ -1486,6 +1546,13 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
     left: 0;
     z-index: 100;
   }
+}
+
+@media (min-width: 768px){
+#related-products .product.list .summary .title, #products-list .product.list .summary .title {
+    font-size: 15px;
+    text-align: center;
+}
 }
 
 .toggle-cart-products {
@@ -2055,7 +2122,22 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 }
 
 /* --------------------------------------------------------------------------------------------- */
-
+#search-bar{
+    float: right;
+    position: relative;
+    width: 100%;
+    margin: 0 20px 0 10px;
+	
+		@media(min-width:768px){
+		float:right;
+		position:relative;
+		width: auto;
+		}
+}
+	
+.top-search{
+	float: right;
+}
 #search {
 	h1 {
 		margin-bottom: 20px;
@@ -2070,7 +2152,7 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		i {
-			font-size: 5vw;
+			font-size: 40px;
 			color: #f1796d;
 			margin-bottom: 10px;
 		}
@@ -2082,54 +2164,45 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 
 .search-input {
 	position: relative;
-	display: block;
-	width: 100%;
-	padding: 13px 25px;
-	outline: none;
-	border: none;
-	font-size: 1em;
-	font-weight: 100;
-	border-bottom: 0;
-	border-top: 0;
-	&::-webkit-input-placeholder {
-		color: #888888;
-		font-size: 14px;
-		font-weight: 500;
-	}
-	&:-moz-placeholder {
-		color: #888888;
-		opacity: 1;
-		font-size: 14px;
-		font-weight: 500;
-	}
-	&::-moz-placeholder {
-		color: #888888;
-		opacity: 1;
-		font-size: 14px;
-		font-weight: 500;
-	}
-	&:-ms-input-placeholder {
-		color: #888888;
-		font-size: 14px;
-		font-weight: 500;
+		display: block;
+		width: 100%;
+		max-width:768px;
+		padding: 13px 25px;
+		outline: 0;
+		text-align: center;
+		border: 0;
+		border-bottom: 1px solid #ddd;
+		font-size: 12px;
+
+		&::-webkit-input-placeholder {
+			color: #666;
+		}
+		&:-moz-placeholder {
+			color: #666;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: #666;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: #666;
+		}
+
+	@media(min-width:768px){
+		border-bottom: 1px solid #ddd;
+		max-width:300px!important;
 	}
 }
 
 .search-submit {
 	position: absolute;
-	background-color: transparent;
-	top: 9px;
-	left: 0;
-	float: left;
+	top: 11px;
+	right: 20px;
+	float: right;
 	display: block;
-	border: none;
+	border: 0;
+	background-color: #fff;
 	width: 19px;
 	height: 20px;
-	&:after {
-		font-family: 'FontAwesome';
-		content: '\f002';
-		color: #888888;
-	}
 }
-
-/*-- Ny kod*/
